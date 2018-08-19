@@ -1,0 +1,32 @@
+    <% include partials/_header %>
+
+    <div class="container">
+        <h1 class="text-center display-4">Update user details</h1>
+        <div class="row">
+            <!-- FORM -->
+            
+            <div class="col-md-6 offset-md-3 mt-2">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/edit/<%= client._id %>" method="post">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input class="form-control" type="text" name="firstName" placeholder="First Name" value="<%= client.first_name %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input class="form-control" type="text" name="lastName" placeholder="Last Name" value="<%= client.last_name %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input class="form-control" type="text" name="email" placeholder="Email Address" value="<%= client.email %>">
+                            </div>
+                            <button class="btn btn-primary" type="submit" value="Update">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% include partials/_footer %>
